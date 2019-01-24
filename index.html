@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Welcome to Nashville</h1>
+<div id="searchForm">
+  <div id="parkDIV">
+      <section id="itinerary--parks"></section>
+      <select name="Park Options">
+          <option value="option">Parks</option>
+        </select>
+        <button type="submit" id="searchParkBTN">Search</button>
+  </div>
+  <div id="restaurantDIV">
+    <section id="itinerary--restaurant"></section>
+    <select name="Restaurant Options">
+        <option value="option">Restaurant</option>
+      </select>
+      <button type="submit" id="searchRestaurantBTN">Search</button>
+  </div>
+  <div id="eventsDIV">
+    <section id="itinerary--events"></section>
+    <select name="Event Options">
+        <option value="option" type="date">Events</option>
+    </select>
+    <button type="submit" id="searchEventBTN">Search</button>
+  </div>
+  <div id="concertsDIV">
+    <section id="itinerary--shows"></section>
+    <select name="Concert Options" Search">
+        <option value="option" type="date">Concerts</option>
+      </select>
+      <button type="submit" id="searchConcertBTN">Search</button>
+  </div>
+</div>
+
+<div id="resultsContainer">
+  <h2>Results</h2>
+</div>
+
+  <div id="itineraryContainer">
+    <h2>Your Itinerary</h2>
+
+  </div>
+
+
+
+  <script src="concerts/concerts.js"></script>
+  <script src="foods/foods.js"></script>
+  <script src="meetups/meetups.js"></script>
+  <script src="parks/parks.js"></script>
+</body>
+
+</html>
