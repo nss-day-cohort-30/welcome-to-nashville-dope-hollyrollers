@@ -4,7 +4,10 @@ const concertButton = document.querySelector("#searchConcertBTN")
 concertButton.addEventListener(
         "click",
         () =>{
-fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&startDateTime=2019-04-01T05:00:00Z&endDateTime=2019-04-02T00:00:00Z&city=nashville&radius=25&apikey=v4IpUAshxvYP3PmSeGx6OSRn1rxWWT3z`
+            var dateInput = document.getElementById("concertDate").value
+            console.log(dateInput); //e.g. 2015-11-13
+
+fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&localStartDateTime=${dateInput}T04:00:00,${dateInput}T20:00:00&city=nashville&radius=25&apikey=v4IpUAshxvYP3PmSeGx6OSRn1rxWWT3z`
 )
 .then(events => events.json())
 .then(parsedConcerts => {
@@ -28,3 +31,8 @@ const BookingAgent = (concert) => {
     `
 }
 
+// concertButton.addEventListener("click", function() {
+//     var dateInput = String(document.getElementById("Start").value);
+//     console.log(dateInput); //e.g. 2015-11-13
+//     console.log(dateInput.split("-"))
+// });
