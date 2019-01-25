@@ -12,40 +12,44 @@
 <body>
 
   <h1>Welcome to Nashville</h1>
-<div id="searchForm">
-  <div id="parkDIV">
+  <div id="searchForm">
+    <div id="parkDIV">
       <section id="itinerary--parks"></section>
       <select name="Park Options">
-          <option id="dog_park" value="option">dog park</option>
-        </select>
-        <button type="submit" id="searchParkBTN">Search</button>
-  </div>
-  <div id="restaurantDIV">
-    <section id="itinerary--restaurant"></section>
-    <select name="Restaurant Options">
-        <option value="option">Restaurant</option>
+        <option id="dog_park" value="option">dog park</option>
+      </select>
+      <button type="submit" id="searchParkBTN">Search</button>
+    </div>
+    <div id="restaurantDIV">
+      <section id="itinerary--restaurant"></section>
+      <select id = "restOptions">
+        <option value="25" id = "Chinese">Chinese</option>
+        <option value="1" id = "American">American</option>
+        <option value="55" id = "Italian">Italian</option>
+        <option value="73" id = "Mexican">Mexican</option>
+        <option value="168" id = "Burger">Burger</option>
       </select>
       <button type="submit" id="searchRestaurantBTN">Search</button>
-  </div>
-  <div id="eventsDIV">
-    <section id="itinerary--events"></section>
-    <select name="Event Options">
+    </div>
+    <div id="eventsDIV">
+      <section id="itinerary--events"></section>
+      <select name="Event Options">
         <option value="option" type="date">Events</option>
-    </select>
-    <button type="submit" id="searchEventBTN">Search</button>
-  </div>
-  <div id="concertsDIV">
-    <section id="itinerary--shows"></section>
-    <select name="Concert Options" Search">
+      </select>
+      <button type="submit" id="searchEventBTN">Search</button>
+    </div>
+    <div id="concertsDIV">
+      <section id="itinerary--shows"></section>
+      <select name="Concert Options" Search">
         <option value="option" type="date">Concerts</option>
       </select>
       <button type="submit" id="searchConcertBTN">Search</button>
+    </div>
   </div>
-</div>
 
-<div id="resultsContainer">
-  <h2>Results</h2>
-</div>
+  <div id="resultsContainer">
+    <h2>Results</h2>
+  </div>
 
   <div id="itineraryContainer">
     <h2>Your Itinerary</h2>
