@@ -29,8 +29,11 @@
   </div>
   <div id="eventsDIV">
     <section id="itinerary--events"></section>
-    <select name="Event Options">
-        <option value="option" type="date">Events</option>
+    <select id="eventOptions">
+      <option selected disabled hidden>- SELECT DATE -</option>
+      <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
+      <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
+      <option value="2019-03-01,2019-03-31" class="">MARCH</option>
     </select>
     <button type="submit" id="searchEventBTN">Search</button>
   </div>
@@ -48,7 +51,12 @@
 </div>
 
   <div id="itineraryContainer">
-    <h2>Your Itinerary</h2>
+      <h3>Here is your itinerary</h3>
+      <div id="parkItinerary"></div>
+      <div id="foodItinerary"></div>
+      <div id="eventItinerary"></div>
+      <div id="concertItinerary"></div>
+    </div>
 
   </div>
 
@@ -58,6 +66,7 @@
   <script src="foods/foods.js"></script>
   <script src="meetups/meetups.js"></script>
   <script src="parks/parks.js"></script>
+  <script src="meetups/meetupEventListeners.js"></script>
 </body>
 
 </html>
