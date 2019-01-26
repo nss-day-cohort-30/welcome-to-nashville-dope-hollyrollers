@@ -1,4 +1,5 @@
 const resultOutput = document.querySelector("#resultsContainer")
+const foodItinerary = document.querySelector("#foodItinerary")
 
 //need to break this up
 const createRestHTML = (restaurant, index) => {
@@ -22,11 +23,11 @@ const createRestHTML = (restaurant, index) => {
 const addToDom = (restaurant, index) => {
 
 }
-
-
-
-const addEvents = resultOutput.addEventListener("click", function () {
-    event.target
+//Adds event listener to parent container. 
+//Clicking on buttons will add corresponding div to the intinerary
+const Events = resultOutput.addEventListener("click", function () {
+    const clickedDiv = document.getElementById(event.target.id)
+    foodItinerary.appendChild(clickedDiv)
 
 })
 
