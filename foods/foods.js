@@ -37,7 +37,7 @@ const fetchCuisine = (cuisine_id) => {
         .then(parsedResult => {
             const restArray = parsedResult[Object.keys(parsedResult)[3]]
             for (let index = 0; index < restArray.length; index++) {
-                const element = searchedArray[index]
+                const element = restArray[index]
                 const eachRestaurant = element["restaurant"]
                 createRestHTML(eachRestaurant, index)
                 addToDom(eachRestaurant, index)
