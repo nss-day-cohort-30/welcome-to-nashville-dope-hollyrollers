@@ -6,7 +6,7 @@ let parksSearchButton = document.getElementById("searchParkBTN")
 let resultsContainer = document.getElementById("resultsContainer")
 
 let printingFunction = (particularPark) => { return `
-<div id="${particularPark.park_name}"> ${particularPark.park_name} <div>
+<div id="${particularPark.park_name}"> Name: ${particularPark.park_name} Address: ${particularPark.mapped_location_address} <div>
 <button type="submit" id="button--${particularPark.park_name}">Add to my Itinerary</button> `}
 
 
