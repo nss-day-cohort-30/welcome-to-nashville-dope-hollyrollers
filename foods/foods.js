@@ -8,7 +8,6 @@ const fetchAll = () => {
             const thirdRest = (restArray[2]["restaurant"])
         })
 }
-
 const addToDom = (restaurant) => {
     resultOutput.innerHTML += `${restaurant.name}: `
     resultOutput.innerHTML += `${restaurant.location.address}  `
@@ -19,6 +18,8 @@ const createButton = (index) => {
     button.appendChild(document.createTextNode("Add to your itinerary"));
     resultOutput.appendChild(button);
 }
+
+
 const fetchCuisine = (cuisine_id) => {
     fetch(`https://developers.zomato.com/api/v2.1/search?city_id=1138&cuisines=${cuisine_id}&apikey=812fea37dd42b5c8a532f151eaf25416`)
         .then(result => result.json())
@@ -32,11 +33,10 @@ const fetchCuisine = (cuisine_id) => {
               }
 
         });
-
 }
-
 const searchButton = document.querySelector("#searchRestaurantBTN")
 searchButton.addEventListener("click", function () {
+    resultOutput.innerHTML = ""
     let cuisineInput = document.querySelector("#restOptions").value
     fetchCuisine(cuisineInput)
 })
