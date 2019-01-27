@@ -4,6 +4,8 @@ let parksSearchButton = document.getElementById("searchParkBTN")
 
 let resultsContainer = document.getElementById("parks--resultsContainer")
 
+let parkItineraryContainer = document.getElementById("parkItinerary")
+
 //Array used to populate the dynamic dropdown options of the parks select object
 let parkFeatureOptions = ["nature_center", "picnic_shelters", "dog_park", "hiking_trails", "ada_accessible", "soccer_fields", "baseball_fields", "basketball_courts", "volleyball", "skate_parks", "swimming_pool", "spray_park", "golf_course", "tennis_courts", "disc_golf", "lake", "community_garden", "walk_jog_paths", "horse_trails", "mountain_bike_trails", "boat_launch", "camping_available_by_permit", "lake"]
 
@@ -20,7 +22,7 @@ parkFeatureOptions.forEach(feature => {
 //Function that returns the search results HTML element
 let outcomePrintingFunction = (particularPark) => {
     return `
-<div id="${particularPark.park_name}"> Name: ${particularPark.park_name} Address: ${particularPark.mapped_location_address} <div>
+<div id="${particularPark.park_name}"> Name: ${particularPark.park_name} Address: ${particularPark.mapped_location_address} </div>
 <button type="submit" id="button--${particularPark.park_name}">Add to my Itinerary</button> `
 }
 
@@ -45,4 +47,13 @@ fetch("https://data.nashville.gov/resource/xbru-cfzi.json?$$app_token=lK9Bzlilno
 
     })
 
+    resultsContainer.addEventListener("click", function() {
+        if(event.target.id.startsWith("button")) {
+            let idArray = event.target.id.split("--")
+            let elementToMoveToItinerary = document.getElementById(idArray[1]).innerText
+            console.log(elementToMoveToItinerary)
+            parkItineraryContainer.innerHTML = ""
+            parkItineraryContainer.innerHTML = elementToMoveToItinerary
+        }
+    })
 
