@@ -2,8 +2,9 @@ let parksSelectDropdown = document.getElementById("park--options")
 
 let parksSearchButton = document.getElementById("searchParkBTN")
 
-let resultsContainer = document.getElementById("resultsContainer")
+let resultsContainer = document.getElementById("parks--resultsContainer")
 
+//
 let parkFeatureOptions = ["nature_center", "picnic_shelters", "dog_park", "hiking_trails", "ada_accessible", "soccer_fields", "baseball_fields", "basketball_courts", "volleyball", "skate_parks", "swimming_pool", "spray_park", "golf_course",  "tennis_courts", "disc_golf", "lake", "community_garden", "walk_jog_paths", "horse_trails", "mountain_bike_trails", "boat_launch", "camping_available_by_permit", "lake"]
 
 let dropdownPrintingFunction = (particularFeature) => {return `
@@ -24,10 +25,13 @@ fetch("https://data.nashville.gov/resource/xbru-cfzi.json?$$app_token=lK9Bzlilno
     .then(response => response.json())
     .then(entireParkList => {
         parksSearchButton.addEventListener("click", function () {
+            resultsContainer.innerHTML = ""
             let currentFeature = document.getElementById("park--options")
             entireParkList.forEach(park => {
                 if (park[currentFeature.value] === "Yes")
                 resultsContainer.innerHTML += outcomePrintingFunction(park)
+
+                else{console.log("fail")}
             
                 
             });
