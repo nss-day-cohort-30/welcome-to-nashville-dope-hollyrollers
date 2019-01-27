@@ -22,7 +22,7 @@ parkFeatureOptions.forEach(feature => {
 //Function that returns the search results HTML element
 let outcomePrintingFunction = (particularPark) => {
     return `
-<div id="${particularPark.park_name}"> Name: ${particularPark.park_name} Address: ${particularPark.mapped_location_address} </div>
+<div id="${particularPark.park_name}">${particularPark.park_name}</br> ${particularPark.mapped_location_address} </div>
 <button type="submit" id="button--${particularPark.park_name}">Add to my Itinerary</button> `
 }
 
@@ -46,13 +46,17 @@ fetch("https://data.nashville.gov/resource/xbru-cfzi.json?$$app_token=lK9Bzlilno
         })
 
     })
-
+    //Event listener on park results continer 
     resultsContainer.addEventListener("click", function() {
+        //if the id of the clicked element starts with the word 'button'
         if(event.target.id.startsWith("button")) {
+            //split the id of the button on the --, this gives you an array
             let idArray = event.target.id.split("--")
+            //refrence to inner text the element with the id equal to the value of index one of the 'id array'
             let elementToMoveToItinerary = document.getElementById(idArray[1]).innerText
-            console.log(elementToMoveToItinerary)
+            //reset the inner html of the park itinerary container, so there can only be one itinerary item at a time
             parkItineraryContainer.innerHTML = ""
+            //set the inner html of the park itinerary equal to the inner text of the refrenced element 
             parkItineraryContainer.innerHTML = elementToMoveToItinerary
         }
     })
