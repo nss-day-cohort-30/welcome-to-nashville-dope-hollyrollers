@@ -22,7 +22,7 @@ parkFeatureOptions.forEach(feature => {
 //Function that returns the search results HTML element
 let outcomePrintingFunction = (particularPark) => {
     return `
-<div id="${particularPark.park_name}">${particularPark.park_name}</br> ${particularPark.mapped_location_address} </div>
+<div id="${particularPark.park_name}">${particularPark.park_name}:  ${particularPark.mapped_location_address} </div>
 <button type="submit" id="button--${particularPark.park_name}">Add to my Itinerary</button> `
 }
 
@@ -37,7 +37,7 @@ fetch("https://data.nashville.gov/resource/xbru-cfzi.json?$$app_token=lK9Bzlilno
             resultsContainer.innerHTML = ""
             let currentFeature = document.getElementById("park--options")
             entireParkList.forEach(park => {
-                //if the park key with the same name as the selected option has a value of "Yes" run the outcomePrinting function with appropriate park information and add it to the results container html
+                //if the park key with the same name as the selected option has a value of "Yes" run the outcomePrinting function with appropriate park information and add it to the results container inner html
                 if (park[currentFeature.value] === "Yes") {
                     resultsContainer.innerHTML += outcomePrintingFunction(park)}
 
