@@ -27,7 +27,7 @@ const BookingAgent = (concert) => {
     <ul style="list-style:none !important;>
       <li style="text-decoration:none;"><a href="${concert.url}">${concert.name}</a></li>
       <li>${concert.dates.start.localTime} at ${concert._embedded.venues[0].name}</li>
-      <button type="submit" id="button--${concert.name}">Add to my Itinerary</button>
+      <button type="submit" id="buttonConcert--${concert.name}">Add to my Itinerary</button>
     </ul>
     `
 }
@@ -37,3 +37,18 @@ const BookingAgent = (concert) => {
 //     console.log(dateInput); //e.g. 2015-11-13
 //     console.log(dateInput.split("-"))
 // });
+
+    // //Event listener on concerts results continer 
+    // concertsResultsContainer.addEventListener("click", function() {
+    //     //if the id of the clicked element starts with the word 'button'
+    //     if(event.target.id.startsWith("buttonConcert")) {
+    //         //split the id of the button on the --, this gives you an array
+    //         let idArrayConcerts = event.target.id.split("--")
+    //         //refrence to inner text the element with the id equal to the value of index one of the 'id array'
+    //         let elementToMoveToItineraryConcerts = document.getElementById(idArrayConcerts[1]).innerText
+    //         //reset the inner html of the concerts itinerary container, so there can only be one itinerary item at a time
+    //         concertItineraryContainer.innerHTML = ""
+    //         //set the inner html of the concerts itinerary equal to the inner text of the refrenced element 
+    //         concertItineraryContainer.innerHTML = `${elementToMoveToItineraryConcerts}`
+    //     }
+    // })
