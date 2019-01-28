@@ -1,4 +1,4 @@
-const resultOutput = document.querySelector("#resultsContainer")
+const resultOutput = document.querySelector("#foods--resultsContainer")
 const foodItinerary = document.querySelector("#foodItinerary")
 
 //need to break this up. 
