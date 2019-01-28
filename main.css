@@ -18,3 +18,23 @@
 #concertsDIV {
   padding:10px;
 }
+
+.resultsGroup {
+  height: 100px;
+  width: 400px;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.itinerarySectionName {
+  font-weight: bold;
+}
+
+#itineraryContainer {
+  height: 200px;
+  width: 500px;
+  border: 1px solid black;
+}
