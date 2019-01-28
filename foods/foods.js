@@ -31,16 +31,15 @@ resultOutput.addEventListener("click", function () {
     const divChildren = resultOutput.children
     let firstChild = foodItinerary.firstElementChild
     if (firstChild !== null) {
-    firstChild.parentNode.removeChild(firstChild)
+        firstChild.parentNode.removeChild(firstChild)
     }
-        for (let index = 0; index < divChildren.length; index++) {
+    for (let index = 0; index < divChildren.length; index++) {
         const element = divChildren[index];
-        const eventId = parseInt(event.target.id)   
-           
+        const eventId = parseInt(event.target.id)
+
         if (eventId === index) {
-          $(element).clone().appendTo(foodItinerary)
-           }
-           
+            $(element).clone().appendTo(foodItinerary)
+        }
     }
 })
 
