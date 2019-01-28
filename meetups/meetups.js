@@ -15,7 +15,7 @@ const eventFactory = (currentEvent) => {
     <div>Event: ${currentEvent.name.text}</div>
     <div> Where: ${currentEvent.venue.address.localized_multi_line_address_display}</div>
     </div>
-    <button id="button--${currentEvent.name.text}" class="saveMeetBtn">Save to Itinerary</button>
+    <button id="button--${currentEvent.name.text}" class="saveMeetBtn">Add to my Itinerary</button>
     `
 }
 

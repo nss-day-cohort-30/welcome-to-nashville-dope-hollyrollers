@@ -13,7 +13,7 @@ const createRestHTML = (restaurant, index) => {
     restAddress.appendChild(addressContent)
     const button = document.createElement("button")
     button.setAttribute("id", [index])
-    button.appendChild(document.createTextNode("Add to your itinerary"))
+    button.appendChild(document.createTextNode("Add to my Itinerary"))
     resultOutput.appendChild(restContainer)
     restContainer.appendChild(restName)
     restContainer.appendChild(restAddress)
