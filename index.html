@@ -9,18 +9,18 @@
   <title>Document</title>
 </head>
 
-<body>
+<body id="body">
 
   <h1>Welcome to Nashville</h1>
-<div id="searchForm">
-  <div id="parkDIV">
+  <div id="searchForm">
+    <div id="parkDIV">
       <section id="itinerary--parks"></section>
 
       <select name="Park Options" id="park--options">
-          <option id="default_option" value="default_option">Search Park By Feature</option>
-        </select>
+        <option id="default_option" value="default_option">Search Park By Feature</option>
+      </select>
 
-        <button type="submit" id="searchParkBTN">Search</button>
+      <button type="submit" id="searchParkBTN">Search</button>
 
   </div>
   <div id="restaurantDIV">
@@ -58,34 +58,38 @@
       <option value="2019-11-01,2019-11-30" class="">NOVEMBER</option>
       <option value="2019-12-01,2019-12-31" class="">DECEMBER</option>
 
-    </select>
-    <button type="submit" id="searchEventBTN">Search</button>
-  </div>
-  <div id="concertsDIV">
-    <section id="itinerary--shows"></section>
-        <label for="concertDate">Start Date of Concert</label><br>
-    <input type="date" name="concertDate" id="concertDate">
-      <button type="submit" id="searchConcertBTN">Search</button>
-  </div>
-</div>
-
-<div id="resultsContainer">
-  <h2>Results</h2>
-  <div id="parks--resultsContainer"></div>
-  <div id="foods--resultsContainer"></div>
-  <div id="concerts--resultsContainer"></div>
-  <div id="events--resultsContainer"></div>
-</div>
-
-  <div id="itineraryContainer">
-      <h3>Here is your itinerary</h3>
-      <div id="parkItinerary"></div>
-      <div id="foodItinerary"></div>
-      <div id="eventItinerary"></div>
-      <div id="concertItinerary"></div>
+      </select>
+      <button type="submit" id="searchEventBTN">Search</button>
     </div>
-
+    <div id="concertsDIV">
+      <section id="itinerary--shows"></section>
+      <label for="concertDate">Start Date of Concert</label><br>
+      <input type="date" name="concertDate" id="concertDate">
+      <button type="submit" id="searchConcertBTN">Search</button>
+    </div>
   </div>
+  <h2>Results</h2>
+  <div id="resultsContainer">
+    <div class="resultsGroup" id="parks--resultsContainer"></div>
+    <div class="resultsGroup" id="foods--resultsContainer"></div>
+    <div class="resultsGroup" id="concerts--resultsContainer"></div>
+    <div class="resultsGroup" id="events--resultsContainer"></div>
+  </div>
+ 
+    <div id="itineraryContainer">
+      <h3>Here is your itinerary</h3>
+      <span class="itinerarySectionName itinObj">Your Park: </span>
+      <div class="itinObj" id="parkItinerary itinObj"></div>
+      <span class="itinerarySectionName itinObj">Your Restaurant: </span>
+      <div class="itinObj" id="foodItinerary itinObj"></div>
+      <span class="itinerarySectionName itinObj">Your Event: </span>
+      <div class="itinObj" id="eventItinerary"></div>
+      <span class="itinerarySectionName itinObj">Your Concert: </span>
+      <div class="itinObj" id="concertItinerary"></div>
+    </div>
+  
+
+
 
 
 
