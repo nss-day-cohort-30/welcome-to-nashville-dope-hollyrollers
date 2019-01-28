@@ -7,7 +7,7 @@ let resultsContainer = document.getElementById("parks--resultsContainer")
 let parkItineraryContainer = document.getElementById("parkItinerary")
 
 //Array used to populate the dynamic dropdown options of the parks select object
-let parkFeatureOptions = ["nature_center", "picnic_shelters", "dog_park", "hiking_trails", "ada_accessible", "soccer_fields", "baseball_fields", "basketball_courts", "volleyball", "skate_parks", "swimming_pool", "spray_park", "golf_course", "tennis_courts", "disc_golf", "lake", "community_garden", "walk_jog_paths", "horse_trails", "mountain_bike_trails", "boat_launch", "camping_available_by_permit", "lake"]
+let parkFeatureOptions = ["nature_center", "picnic_shelters", "dog_park", "hiking_trails", "ada_accessible", "soccer_fields", "baseball_fields", "basketball_courts", "volleyball", "skate_parks", "swimming_pool", "spray_park", "golf_course", "tennis_courts", "disc_golf", "lake", "community_garden", "walk_jog_paths", "horse_trails", "mountain_bike_trails", "boat_launch", "camping_available_by_permit"]
 
 //Function that returns the dropdown options HTML element 
 let dropdownPrintingFunction = (particularFeature) => {return `
