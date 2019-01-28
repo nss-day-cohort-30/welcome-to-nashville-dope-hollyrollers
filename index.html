@@ -24,12 +24,23 @@
 
   </div>
   <div id="restaurantDIV">
-    <section id="itinerary--restaurant"></section>
-    <select name="Restaurant Options">
-        <option value="option">Restaurant</option>
+      <section id="itinerary--restaurant"></section>
+      <select id="restOptions">
+        <option selected disabled hidden>- SELECT CUISINE -</option>
+        <option value="1" id="American">American</option>
+        <option value="193" id="BBQ">BBQ</option>
+        <option value="182" id="Breakfast">Breakfast</option>
+        <option value="168" id="Burger">Burger</option>
+        <option value="25" id="Chinese">Chinese</option>
+        <option value="45" id="French">French</option>
+        <option value="55" id="Italian">Italian</option>
+        <option value="73" id="Mexican">Mexican</option>
+        <option value="83" id="Seafood">Seafood</option>
+        <option value="95" id="Thai">Thai</option>
       </select>
       <button type="submit" id="searchRestaurantBTN">Search</button>
-  </div>
+    </div>
+
   <div id="eventsDIV">
     <section id="itinerary--events"></section>
     <select id="eventOptions">
@@ -78,6 +89,7 @@
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="concerts/concerts.js"></script>
   <script src="foods/foods.js"></script>
   <script src="meetups/meetups.js"></script>
