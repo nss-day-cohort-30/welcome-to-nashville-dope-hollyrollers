@@ -7,46 +7,55 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="main.css">
   <title>Document</title>
-</head>
+  </head>
 
 <body>
 
   <h1>Welcome to Nashville</h1>
-<div id="searchForm">
-  <div id="parkDIV">
+  <div id="searchForm">
+    <div id="parkDIV">
       <section id="itinerary--parks"></section>
-      
-      <select name="Park Options" id="park--options">
-          <option id="default_option" value="default_option">Search Park By Feature</option>
-        </select>
-         
-        <button type="submit" id="searchParkBTN">Search</button>
-     
-  </div>
-  <div id="restaurantDIV">
-    <section id="itinerary--restaurant"></section>
-    <select name="Restaurant Options">
-        <option value="option">Restaurant</option>
+      <select name="Park Options">
+        <option id="dog_park" value="option">dog park</option>
+      </select>
+      <button type="submit" id="searchParkBTN">Search</button>
+    </div>
+    <div id="restaurantDIV">
+      <section id="itinerary--restaurant"></section>
+      <select id="restOptions">
+        <option selected disabled hidden>- SELECT CUISINE -</option>
+        <option value="1" id="American">American</option>
+        <option value="193" id="BBQ">BBQ</option>
+        <option value="182" id="Breakfast">Breakfast</option>
+        <option value="168" id="Burger">Burger</option>
+        <option value="25" id="Chinese">Chinese</option>
+        <option value="45" id="French">French</option>
+        <option value="55" id="Italian">Italian</option>
+        <option value="73" id="Mexican">Mexican</option>
+        <option value="83" id="Seafood">Seafood</option>
+        <option value="95" id="Thai">Thai</option>
+
       </select>
       <button type="submit" id="searchRestaurantBTN">Search</button>
-  </div>
-  <div id="eventsDIV">
-    <section id="itinerary--events"></section>
-    <select id="eventOptions">
-      <option selected disabled hidden>- SELECT DATE -</option>
-      <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
-      <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
-      <option value="2019-03-01,2019-03-31" class="">MARCH</option>
-    </select>
-    <button type="submit" id="searchEventBTN">Search</button>
-  </div>
-  <div id="concertsDIV">
-    <section id="itinerary--shows"></section>
-        <label for="concertDate">Start Date of Concert</label><br>
-    <input type="date" name="concertDate" id="concertDate">  
+    </div>
+    <div id="eventsDIV">
+      <section id="itinerary--events"></section>
+      <select id="eventOptions">
+        <option selected disabled hidden>- SELECT DATE -</option>
+        <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
+        <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
+        <option value="2019-03-01,2019-03-31" class="">MARCH</option>
+      </select>
+      <button type="submit" id="searchEventBTN">Search</button>
+    </div>
+    <div id="concertsDIV">
+      <section id="itinerary--shows"></section>
+      <select name="Concert Options" Search">
+        <option value="option" type="date">Concerts</option>
+      </select>
       <button type="submit" id="searchConcertBTN">Search</button>
+    </div>
   </div>
-</div>
 
 <div id="resultsContainer">
   <h2>Results</h2>
@@ -57,12 +66,12 @@
 </div>
 
   <div id="itineraryContainer">
-      <h3>Here is your itinerary</h3>
-      <div id="parkItinerary"></div>
-      <div id="foodItinerary"></div>
-      <div id="eventItinerary"></div>
-      <div id="concertItinerary"></div>
-    </div>
+    <h3>Here is your itinerary</h3>
+    <div id="parkItinerary"></div>
+    <div id="foodItinerary"></div>
+    <div id="eventItinerary"></div>
+    <div id="concertItinerary"></div>
+  </div>
 
   </div>
 
@@ -73,6 +82,7 @@
   <script src="meetups/meetups.js"></script>
   <script src="parks/parks.js"></script>
   <script src="meetups/meetupEventListeners.js"></script>
-</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
 
 </html>
