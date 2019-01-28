@@ -49,13 +49,10 @@ const fetchCuisine = (cuisine_id) => {
                 const eachRestaurant = element["restaurant"]
                 createRestHTML(eachRestaurant, index)
                 addToDom(eachRestaurant, index)
-
-
             }
 
         });
 }
-
 //When the search button is clicked, fetch restaurants matching the selected cuisine
 const searchButton = document.querySelector("#searchRestaurantBTN")
 searchButton.addEventListener("click", function () {
