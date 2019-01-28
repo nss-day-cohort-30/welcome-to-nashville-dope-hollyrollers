@@ -1,11 +1,11 @@
 const resultOutput = document.querySelector("#foods--resultsContainer")
 const foodItinerary = document.querySelector("#foodItinerary")
 
-//need to break this up. 
-//create divcontainer for name, address and button and add them all to the DOM. 
+//need to break this up.
+//create divcontainer for name, address and button and add them all to the DOM.
 const createRestHTML = (restaurant, index) => {
     const restContainer = document.createElement("div")
-    const restName = document.createElement("h4")
+    const restName = document.createElement("div")
     const nameContent = document.createTextNode(restaurant.name)
     restName.appendChild(nameContent)
     const restAddress = document.createElement("span")
@@ -23,9 +23,9 @@ const createRestHTML = (restaurant, index) => {
 const addToDom = (restaurant, index) => {
 
 }
-//Adds event listener to parent container. 
+//Adds event listener to parent container.
 //Clicking on buttons will add corresponding div to the itinerary
-//I used clone because appendChild screwed up the index when selecting multiple restaurants. 
+//I used clone because appendChild screwed up the index when selecting multiple restaurants.
 
 resultOutput.addEventListener("click", function () {
     const divChildren = resultOutput.children
