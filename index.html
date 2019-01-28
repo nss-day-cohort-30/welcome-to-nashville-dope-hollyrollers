@@ -7,20 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="main.css">
   <title>Document</title>
-  </head>
+</head>
 
 <body>
 
   <h1>Welcome to Nashville</h1>
-  <div id="searchForm">
-    <div id="parkDIV">
+<div id="searchForm">
+  <div id="parkDIV">
       <section id="itinerary--parks"></section>
-      <select name="Park Options">
-        <option id="dog_park" value="option">dog park</option>
-      </select>
-      <button type="submit" id="searchParkBTN">Search</button>
-    </div>
-    <div id="restaurantDIV">
+
+      <select name="Park Options" id="park--options">
+          <option id="default_option" value="default_option">Search Park By Feature</option>
+        </select>
+
+        <button type="submit" id="searchParkBTN">Search</button>
+
+  </div>
+  <div id="restaurantDIV">
       <section id="itinerary--restaurant"></section>
       <select id="restOptions">
         <option selected disabled hidden>- SELECT CUISINE -</option>
@@ -34,28 +37,37 @@
         <option value="73" id="Mexican">Mexican</option>
         <option value="83" id="Seafood">Seafood</option>
         <option value="95" id="Thai">Thai</option>
-
       </select>
       <button type="submit" id="searchRestaurantBTN">Search</button>
     </div>
-    <div id="eventsDIV">
-      <section id="itinerary--events"></section>
-      <select id="eventOptions">
-        <option selected disabled hidden>- SELECT DATE -</option>
-        <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
-        <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
-        <option value="2019-03-01,2019-03-31" class="">MARCH</option>
-      </select>
-      <button type="submit" id="searchEventBTN">Search</button>
-    </div>
-    <div id="concertsDIV">
-      <section id="itinerary--shows"></section>
-      <select name="Concert Options" Search">
-        <option value="option" type="date">Concerts</option>
-      </select>
-      <button type="submit" id="searchConcertBTN">Search</button>
-    </div>
+
+  <div id="eventsDIV">
+    <section id="itinerary--events"></section>
+    <select id="eventOptions">
+      <option selected disabled hidden>- SELECT DATE -</option>
+      <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
+      <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
+      <option value="2019-03-01,2019-03-31" class="">MARCH</option>
+      <option value="2019-04-01,2019-04-30" class="">APRIL</option>
+      <option value="2019-05-01,2019-05-31" class="">MAY</option>
+      <option value="2019-06-01,2019-06-30" class="">JUNE</option>
+      <option value="2019-07-01,2019-07-31" class="">JULY</option>
+      <option value="2019-08-01,2019-08-31" class="">AUGUST</option>
+      <option value="2019-09-01,2019-09-30" class="">SEPTEMBER</option>
+      <option value="2019-10-01,2019-10-31" class="">OCTOBER</option>
+      <option value="2019-11-01,2019-11-30" class="">NOVEMBER</option>
+      <option value="2019-12-01,2019-12-31" class="">DECEMBER</option>
+
+    </select>
+    <button type="submit" id="searchEventBTN">Search</button>
   </div>
+  <div id="concertsDIV">
+    <section id="itinerary--shows"></section>
+        <label for="concertDate">Start Date of Concert</label><br>
+    <input type="date" name="concertDate" id="concertDate">
+      <button type="submit" id="searchConcertBTN">Search</button>
+  </div>
+</div>
 
 <div id="resultsContainer">
   <h2>Results</h2>
@@ -66,23 +78,23 @@
 </div>
 
   <div id="itineraryContainer">
-    <h3>Here is your itinerary</h3>
-    <div id="parkItinerary"></div>
-    <div id="foodItinerary"></div>
-    <div id="eventItinerary"></div>
-    <div id="concertItinerary"></div>
-  </div>
+      <h3>Here is your itinerary</h3>
+      <div id="parkItinerary"></div>
+      <div id="foodItinerary"></div>
+      <div id="eventItinerary"></div>
+      <div id="concertItinerary"></div>
+    </div>
 
   </div>
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="concerts/concerts.js"></script>
   <script src="foods/foods.js"></script>
   <script src="meetups/meetups.js"></script>
   <script src="parks/parks.js"></script>
   <script src="meetups/meetupEventListeners.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </body>
+</body>
 
 </html>
