@@ -1,3 +1,9 @@
+#body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
 #searchForm {
   border: 2px solid black;
   padding: 10px;
@@ -24,6 +30,7 @@
   flex-direction: row; 
   flex-wrap: wrap;
   flex-basis: 25%;
+  justify-content: center;
 }
 
 .resultsGroup {
@@ -34,6 +41,7 @@
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
+  flex-grow: inherit;
 }
 
 .itinerarySectionName {
@@ -41,11 +49,21 @@
 }
 
 #itineraryContainer {
-  height: 200px;
+  height: 250px;
   width: 500px;
   border: 1px solid black;
   border-radius: 5px;
+  align-self: center;
+  justify-content: space-between;
+  
 }
+
+.itinObj {
+  margin: 5px;
+  padding: 5px;
+}
+
+
 
 /* img {
   width: 100%;
