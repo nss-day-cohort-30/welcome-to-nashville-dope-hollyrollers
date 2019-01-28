@@ -15,10 +15,13 @@
 <div id="searchForm">
   <div id="parkDIV">
       <section id="itinerary--parks"></section>
-      <select name="Park Options">
-          <option id="dog_park" value="option">dog park</option>
+      
+      <select name="Park Options" id="park--options">
+          <option id="default_option" value="default_option">Search Park By Feature</option>
         </select>
+         
         <button type="submit" id="searchParkBTN">Search</button>
+     
   </div>
   <div id="restaurantDIV">
     <section id="itinerary--restaurant"></section>
@@ -48,6 +51,10 @@
 
 <div id="resultsContainer">
   <h2>Results</h2>
+  <div id="parks--resultsContainer"></div>
+  <div id="foods--resultsContainer"></div>
+  <div id="concerts--resultsContainer"></div>
+  <div id="events--resultsContainer"></div>
 </div>
 
   <div id="itineraryContainer">
