@@ -12,10 +12,11 @@ meetUpsButton.addEventListener("click", () => {
 })
 
 meetUpsResults.addEventListener("click", () => {
+  console.log("you clicked me")
+  eventItineraryContainer.innerHTML = ""
   if (event.target.id.startsWith("button")) {
     let idArray = event.target.id.split("--")
     let elementToMoveToItinerary = document.getElementById(idArray[1]).innerText
-    eventItineraryContainer.innerHTML = ""
     eventItineraryContainer.innerHTML = elementToMoveToItinerary
   }
 })
