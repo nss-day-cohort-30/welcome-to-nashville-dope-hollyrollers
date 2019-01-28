@@ -11,13 +11,10 @@ let getDate = (splitDate) => {
 }
 const eventFactory = (currentEvent) => {
     return `
-    <div class="eventElement">
-    <h4>Event: ${currentEvent.name.text}</h4> <button class="saveMeetBtn">Save to Itinerary</button>
+    <div class="eventElement" id="${currentEvent.name.text}">
+    <h4>Event: ${currentEvent.name.text}</h4> <button id="button--${currentEvent.name.text}" class="saveMeetBtn">Save to Itinerary</button>
     <p> Where: ${currentEvent.venue.address.localized_multi_line_address_display}</p>
     </div>
     `
 }
 
-const addEventToDOM = eventHTML => {
-    document.querySelector("#resultsContainer").innerHTML += eventHTML
-}
