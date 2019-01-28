@@ -60,4 +60,3 @@ fetch("https://data.nashville.gov/resource/xbru-cfzi.json?$$app_token=lK9Bzlilno
             parkItineraryContainer.innerHTML = elementToMoveToItinerary
         }
     })
-

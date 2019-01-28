@@ -22,30 +22,41 @@
 
       <button type="submit" id="searchParkBTN">Search</button>
 
-    </div>
-    <div id="restaurantDIV">
+  </div>
+  <div id="restaurantDIV">
       <section id="itinerary--restaurant"></section>
-      <select name="Restaurant Options">
-        <option value="option">Restaurant</option>
+      <select id="restOptions">
+        <option selected disabled hidden>- SELECT CUISINE -</option>
+        <option value="1" id="American">American</option>
+        <option value="193" id="BBQ">BBQ</option>
+        <option value="182" id="Breakfast">Breakfast</option>
+        <option value="168" id="Burger">Burger</option>
+        <option value="25" id="Chinese">Chinese</option>
+        <option value="45" id="French">French</option>
+        <option value="55" id="Italian">Italian</option>
+        <option value="73" id="Mexican">Mexican</option>
+        <option value="83" id="Seafood">Seafood</option>
+        <option value="95" id="Thai">Thai</option>
       </select>
       <button type="submit" id="searchRestaurantBTN">Search</button>
     </div>
-    <div id="eventsDIV">
-      <section id="itinerary--events"></section>
-      <select id="eventOptions">
-        <option selected disabled hidden>- SELECT DATE -</option>
-        <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
-        <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
-        <option value="2019-03-01,2019-03-31" class="">MARCH</option>
-        <option value="2019-04-01,2019-04-30" class="">APRIL</option>
-        <option value="2019-05-01,2019-05-31" class="">MAY</option>
-        <option value="2019-06-01,2019-06-30" class="">JUNE</option>
-        <option value="2019-07-01,2019-07-31" class="">JULY</option>
-        <option value="2019-08-01,2019-08-31" class="">AUGUST</option>
-        <option value="2019-09-01,2019-09-30" class="">SEPTEMBER</option>
-        <option value="2019-10-01,2019-10-31" class="">OCTOBER</option>
-        <option value="2019-11-01,2019-11-30" class="">NOVEMBER</option>
-        <option value="2019-12-01,2019-12-31" class="">DECEMBER</option>
+
+  <div id="eventsDIV">
+    <section id="itinerary--events"></section>
+    <select id="eventOptions">
+      <option selected disabled hidden>- SELECT DATE -</option>
+      <option value="2019-01-01,2019-01-31" class="">JANUARY</option>
+      <option value="2019-02-01,2019-02-28" class="">FEBURARY</option>
+      <option value="2019-03-01,2019-03-31" class="">MARCH</option>
+      <option value="2019-04-01,2019-04-30" class="">APRIL</option>
+      <option value="2019-05-01,2019-05-31" class="">MAY</option>
+      <option value="2019-06-01,2019-06-30" class="">JUNE</option>
+      <option value="2019-07-01,2019-07-31" class="">JULY</option>
+      <option value="2019-08-01,2019-08-31" class="">AUGUST</option>
+      <option value="2019-09-01,2019-09-30" class="">SEPTEMBER</option>
+      <option value="2019-10-01,2019-10-31" class="">OCTOBER</option>
+      <option value="2019-11-01,2019-11-30" class="">NOVEMBER</option>
+      <option value="2019-12-01,2019-12-31" class="">DECEMBER</option>
 
       </select>
       <button type="submit" id="searchEventBTN">Search</button>
@@ -82,6 +93,7 @@
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="concerts/concerts.js"></script>
   <script src="foods/foods.js"></script>
   <script src="meetups/meetups.js"></script>
