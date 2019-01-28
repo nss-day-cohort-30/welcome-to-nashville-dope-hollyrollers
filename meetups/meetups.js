@@ -12,8 +12,9 @@ let getDate = (splitDate) => {
 const eventFactory = (currentEvent) => {
     return `
     <div class="eventElement" id="${currentEvent.name.text}">
-    <h4>Event: ${currentEvent.name.text}</h4> <button id="button--${currentEvent.name.text}" class="saveMeetBtn">Save to Itinerary</button>
-    <p> Where: ${currentEvent.venue.address.localized_multi_line_address_display}</p>
+    <div>Event: ${currentEvent.name.text}</div>
+    <div> Where: ${currentEvent.venue.address.localized_multi_line_address_display}</div>
+    <button id="button--${currentEvent.name.text}" class="saveMeetBtn">Save to Itinerary</button>
     </div>
     `
 }
