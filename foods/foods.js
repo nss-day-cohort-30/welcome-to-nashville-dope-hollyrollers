@@ -39,7 +39,9 @@ resultOutput.addEventListener("click", function () {
 
         if (eventId === index) {
             $(element).clone().appendTo(foodItinerary)
-        }
+        buttonToRemove = (foodItinerary.firstElementChild.getElementsByTagName("button")[0])
+        buttonToRemove.parentNode.removeChild(buttonToRemove);
+            }
     }
 })
 
