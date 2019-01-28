@@ -29,12 +29,18 @@ const addToDom = (restaurant, index) => {
 
 resultOutput.addEventListener("click", function () {
     const divChildren = resultOutput.children
-    for (let index = 0; index < divChildren.length; index++) {
+    let firstChild = foodItinerary.firstElementChild
+    if (firstChild !== null) {
+    firstChild.parentNode.removeChild(firstChild)
+    }
+        for (let index = 0; index < divChildren.length; index++) {
         const element = divChildren[index];
-        const eventId = parseInt(event.target.id)
+        const eventId = parseInt(event.target.id)   
+           
         if (eventId === index) {
           $(element).clone().appendTo(foodItinerary)
            }
+           
     }
 })
 
